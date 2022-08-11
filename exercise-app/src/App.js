@@ -1,14 +1,16 @@
-import logo from './logo.svg';
 import './App.css';
-import Button from './Components/Counter';
-import { ClickCounter } from './Components/Counter';
-import {MyForm} from './Components/MyForm'
+import Hello from './Components/Hello';
+import { LanguageContext } from './Components/LanguageContext';
+import { LanguageSwitch } from './Components/SwitchLanguage';
 function App() {
   return (
     <>
-    <Button/>
-    <ClickCounter/>
-    <MyForm/>
+        <LanguageContext.Provider value={this.state.language}>
+        <LanguageSwitch/>
+        <Hello />
+        </LanguageContext.Provider>
+
+
     </>
   );
 }
